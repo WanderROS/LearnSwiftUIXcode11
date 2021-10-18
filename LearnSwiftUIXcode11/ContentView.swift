@@ -10,7 +10,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack(alignment: .leading){
+            List{
+                Text("Hello").font(.headline).foregroundColor(.blue).italic()
+                Text("World").bold().foregroundColor(.green)
+                Text("\(UUID())").bold().foregroundColor(.orange)
+                #if DEBUG
+                Button(action: self.ButtonClick) {
+                    Text("Debug")
+                        .bold().italic()
+                }.background(RoundedRectangle(cornerRadius: 7).foregroundColor(.green))
+                #else
+                Button(action: self.ButtonClick) {
+                    Text("Release")
+                        .bold().italic()
+                }.background(RoundedRectangle(cornerRadius: 7).foregroundColor(.green))
+                #endif
+            }
+        }
+    }
+    func ButtonClick()->Void{
+        print("Button Clicked!")
     }
 }
 
