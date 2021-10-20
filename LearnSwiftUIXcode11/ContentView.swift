@@ -11,28 +11,23 @@ import SwiftUI
 struct ContentView: View {
     @State var text: String = "hello"
     var body: some View {
-        VStack{
-            List(0...5,id: \.self){ id  in
-                TableViewCell(text: self.$text)
+        NavigationView{
+            NavigationLink(destination: MyViewController().navigationBarTitle("MyViewController",displayMode: .inline)){
+                Text("Hello")
             }
         }
     }
 }
 
-struct TableViewCell: UIViewRepresentable{
-    @Binding var text: String
-    
-    func makeUIView(context: UIViewRepresentableContext<TableViewCell>) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = text
-        cell.selectionStyle = .gray
-        return cell
+struct MyViewController: UIViewControllerRepresentable{
+    func makeUIViewController(context: Context) -> UIViewController {
+        let viewController = UIViewController()
+        viewController.view.backgroundColor = UIColor.gray
+        return viewController
     }
-    
-    func updateUIView(_ uiView: UITableViewCell, context: Context) {
-        uiView.textLabel?.text = text
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
