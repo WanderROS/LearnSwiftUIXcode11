@@ -9,29 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var text: String = "hello"
     var body: some View {
-        VStack(alignment: .leading){
-            List{
-                Text("Hello").font(.headline).foregroundColor(.blue).italic()
-                Text("World").bold().foregroundColor(.green)
-                Text("\(UUID())").bold().foregroundColor(.orange)
-                #if DEBUG
-                Button(action: self.ButtonClick) {
-                    Text("Debug")
-                        .bold().italic()
-                }.background(RoundedRectangle(cornerRadius: 7).foregroundColor(.green))
-                #else
-                Button(action: self.ButtonClick) {
-                    Text("Release")
-                        .bold().italic()
-                }.background(RoundedRectangle(cornerRadius: 7).foregroundColor(.green))
-                #endif
+        VStack{
+            List(0...5,id: \.self){ id  in
+                TableViewCell(text: self.$text)
             }
         }
     }
-    func ButtonClick()->Void{
-        print("Button Clicked!")
+}
+
+struct TableViewCell: UIViewRepresentable{
+    @Binding var text: String
+    
+    func makeUIView(context: UIViewRepresentableContext<TableViewCell>) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = text
+        cell.selectionStyle = .gray
+        return cell
     }
+    
+    func updateUIView(_ uiView: UITableViewCell, context: Context) {
+        uiView.textLabel?.text = text
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
