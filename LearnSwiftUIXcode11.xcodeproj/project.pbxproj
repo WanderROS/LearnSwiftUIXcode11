@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		C11D5390271DAE0B00604F15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11D538E271DAE0B00604F15 /* LaunchScreen.storyboard */; };
 		C11D539B271DAE0B00604F15 /* LearnSwiftUIXcode11Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D539A271DAE0B00604F15 /* LearnSwiftUIXcode11Tests.swift */; };
 		C11D53A6271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D53A5271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.swift */; };
+		C1FBCA312721290A005A2C76 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1FBCA302721290A005A2C76 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1FBCA312721290A005A2C76 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +154,9 @@
 			dependencies = (
 			);
 			name = LearnSwiftUIXcode11;
+			packageProductDependencies = (
+				C1FBCA302721290A005A2C76 /* Alamofire */,
+			);
 			productName = LearnSwiftUIXcode11;
 			productReference = C11D5380271DAE0A00604F15 /* LearnSwiftUIXcode11.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +229,9 @@
 				Base,
 			);
 			mainGroup = C11D5377271DAE0A00604F15;
+			packageReferences = (
+				C1FBCA2F2721290A005A2C76 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C11D5381271DAE0A00604F15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -594,6 +602,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C1FBCA2F2721290A005A2C76 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/WanderingSouls/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C1FBCA302721290A005A2C76 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FBCA2F2721290A005A2C76 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C11D5378271DAE0A00604F15 /* Project object */;
 }
