@@ -15,6 +15,13 @@
 		C11D5390271DAE0B00604F15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11D538E271DAE0B00604F15 /* LaunchScreen.storyboard */; };
 		C11D539B271DAE0B00604F15 /* LearnSwiftUIXcode11Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D539A271DAE0B00604F15 /* LearnSwiftUIXcode11Tests.swift */; };
 		C11D53A6271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D53A5271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.swift */; };
+		C17AA9E72722ACE7003EC7F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D5383271DAE0A00604F15 /* AppDelegate.swift */; };
+		C17AA9E82722ACE7003EC7F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D5385271DAE0A00604F15 /* SceneDelegate.swift */; };
+		C17AA9E92722ACE7003EC7F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D5387271DAE0A00604F15 /* ContentView.swift */; };
+		C17AA9EB2722ACE7003EC7F1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C17AA9E42722ACE7003EC7F1 /* Alamofire */; };
+		C17AA9ED2722ACE7003EC7F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11D538E271DAE0B00604F15 /* LaunchScreen.storyboard */; };
+		C17AA9EE2722ACE7003EC7F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11D538C271DAE0B00604F15 /* Preview Assets.xcassets */; };
+		C17AA9EF2722ACE7003EC7F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11D5389271DAE0B00604F15 /* Assets.xcassets */; };
 		C1FBCA312721290A005A2C76 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1FBCA302721290A005A2C76 /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C11D5380271DAE0A00604F15 /* LearnSwiftUIXcode11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUIXcode11.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C11D5380271DAE0A00604F15 /* dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11D5383271DAE0A00604F15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C11D5385271DAE0A00604F15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C11D5387271DAE0A00604F15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +57,8 @@
 		C11D53A1271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnSwiftUIXcode11UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11D53A5271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwiftUIXcode11UITests.swift; sourceTree = "<group>"; };
 		C11D53A7271DAE0C00604F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C17AA9F32722ACE7003EC7F1 /* sit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C17AA9F42722ACE8003EC7F1 /* LearnSwiftUIXcode11 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LearnSwiftUIXcode11 copy-Info.plist"; path = "/Users/wander/Desktop/Swift/LearnSwiftUIXcode11/LearnSwiftUIXcode11 copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +84,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C17AA9EA2722ACE7003EC7F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C17AA9EB2722ACE7003EC7F1 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -85,15 +102,17 @@
 				C11D5399271DAE0B00604F15 /* LearnSwiftUIXcode11Tests */,
 				C11D53A4271DAE0B00604F15 /* LearnSwiftUIXcode11UITests */,
 				C11D5381271DAE0A00604F15 /* Products */,
+				C17AA9F42722ACE8003EC7F1 /* LearnSwiftUIXcode11 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		C11D5381271DAE0A00604F15 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C11D5380271DAE0A00604F15 /* LearnSwiftUIXcode11.app */,
+				C11D5380271DAE0A00604F15 /* dev.app */,
 				C11D5396271DAE0B00604F15 /* LearnSwiftUIXcode11Tests.xctest */,
 				C11D53A1271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.xctest */,
+				C17AA9F32722ACE7003EC7F1 /* sit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,9 +160,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C11D537F271DAE0A00604F15 /* LearnSwiftUIXcode11 */ = {
+		C11D537F271DAE0A00604F15 /* dev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C11D53AA271DAE0C00604F15 /* Build configuration list for PBXNativeTarget "LearnSwiftUIXcode11" */;
+			buildConfigurationList = C11D53AA271DAE0C00604F15 /* Build configuration list for PBXNativeTarget "dev" */;
 			buildPhases = (
 				C11D537C271DAE0A00604F15 /* Sources */,
 				C11D537D271DAE0A00604F15 /* Frameworks */,
@@ -153,12 +172,12 @@
 			);
 			dependencies = (
 			);
-			name = LearnSwiftUIXcode11;
+			name = dev;
 			packageProductDependencies = (
 				C1FBCA302721290A005A2C76 /* Alamofire */,
 			);
 			productName = LearnSwiftUIXcode11;
-			productReference = C11D5380271DAE0A00604F15 /* LearnSwiftUIXcode11.app */;
+			productReference = C11D5380271DAE0A00604F15 /* dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C11D5395271DAE0B00604F15 /* LearnSwiftUIXcode11Tests */ = {
@@ -196,6 +215,26 @@
 			productName = LearnSwiftUIXcode11UITests;
 			productReference = C11D53A1271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C17AA9E32722ACE7003EC7F1 /* sit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C17AA9F02722ACE7003EC7F1 /* Build configuration list for PBXNativeTarget "sit" */;
+			buildPhases = (
+				C17AA9E62722ACE7003EC7F1 /* Sources */,
+				C17AA9EA2722ACE7003EC7F1 /* Frameworks */,
+				C17AA9EC2722ACE7003EC7F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sit;
+			packageProductDependencies = (
+				C17AA9E42722ACE7003EC7F1 /* Alamofire */,
+			);
+			productName = LearnSwiftUIXcode11;
+			productReference = C17AA9F32722ACE7003EC7F1 /* sit.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -236,7 +275,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C11D537F271DAE0A00604F15 /* LearnSwiftUIXcode11 */,
+				C11D537F271DAE0A00604F15 /* dev */,
+				C17AA9E32722ACE7003EC7F1 /* sit */,
 				C11D5395271DAE0B00604F15 /* LearnSwiftUIXcode11Tests */,
 				C11D53A0271DAE0B00604F15 /* LearnSwiftUIXcode11UITests */,
 			);
@@ -265,6 +305,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C17AA9EC2722ACE7003EC7F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C17AA9ED2722ACE7003EC7F1 /* LaunchScreen.storyboard in Resources */,
+				C17AA9EE2722ACE7003EC7F1 /* Preview Assets.xcassets in Resources */,
+				C17AA9EF2722ACE7003EC7F1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,17 +347,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C17AA9E62722ACE7003EC7F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C17AA9E72722ACE7003EC7F1 /* AppDelegate.swift in Sources */,
+				C17AA9E82722ACE7003EC7F1 /* SceneDelegate.swift in Sources */,
+				C17AA9E92722ACE7003EC7F1 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		C11D5398271DAE0B00604F15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C11D537F271DAE0A00604F15 /* LearnSwiftUIXcode11 */;
+			target = C11D537F271DAE0A00604F15 /* dev */;
 			targetProxy = C11D5397271DAE0B00604F15 /* PBXContainerItemProxy */;
 		};
 		C11D53A3271DAE0B00604F15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C11D537F271DAE0A00604F15 /* LearnSwiftUIXcode11 */;
+			target = C11D537F271DAE0A00604F15 /* dev */;
 			targetProxy = C11D53A2271DAE0B00604F15 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -451,6 +511,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-D DEV";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -471,6 +532,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-D DEV";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -562,6 +624,46 @@
 			};
 			name = Release;
 		};
+		C17AA9F12722ACE7003EC7F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUIXcode11/Preview Content\"";
+				DEVELOPMENT_TEAM = 4D7NSSCG7J;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "LearnSwiftUIXcode11 copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C17AA9F22722ACE7003EC7F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUIXcode11/Preview Content\"";
+				DEVELOPMENT_TEAM = 4D7NSSCG7J;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "LearnSwiftUIXcode11 copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -574,7 +676,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C11D53AA271DAE0C00604F15 /* Build configuration list for PBXNativeTarget "LearnSwiftUIXcode11" */ = {
+		C11D53AA271DAE0C00604F15 /* Build configuration list for PBXNativeTarget "dev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C11D53AB271DAE0C00604F15 /* Debug */,
@@ -601,9 +703,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		C17AA9F02722ACE7003EC7F1 /* Build configuration list for PBXNativeTarget "sit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C17AA9F12722ACE7003EC7F1 /* Debug */,
+				C17AA9F22722ACE7003EC7F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C17AA9E52722ACE7003EC7F1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/WanderingSouls/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.4;
+			};
+		};
 		C1FBCA2F2721290A005A2C76 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitee.com/WanderingSouls/Alamofire";
@@ -615,6 +734,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C17AA9E42722ACE7003EC7F1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C17AA9E52722ACE7003EC7F1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		C1FBCA302721290A005A2C76 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C1FBCA2F2721290A005A2C76 /* XCRemoteSwiftPackageReference "Alamofire" */;
