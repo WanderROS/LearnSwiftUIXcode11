@@ -20,13 +20,17 @@ struct AdaptView : View{
     func product(_ item: (String, String)) -> some View {
         HStack{
             Image(systemName: item.1)
+                .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .foregroundColor(.white)
                 .padding()
                 .background(Color.blue)
-                .cornerRadius(8)
+                .cornerRadius(7)
+            
             Text("\(item.0)")
+            Spacer()
           
         }
+        .padding(EdgeInsets(top: 1, leading: 15, bottom: 0, trailing: 15))
           
     }
     var body: some View {
