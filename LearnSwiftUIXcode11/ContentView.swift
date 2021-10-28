@@ -9,55 +9,41 @@
 import SwiftUI
 import Combine
 
-struct AdaptView : View{
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-        
-    let products = [
-      ("Mac", "desktopcomputer"),
-      ("iPhone", "desktopcomputer"),
-      ("Airpods", "desktopcomputer")
-    ]
-
-    var body: some View {
-            VStack(spacing: 0){
-                ForEach(products, id:\.0) { v in
-                    HStack{
-                        Image(systemName: v.1)
-                            .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.blue)
-                            .cornerRadius(7)
-                        
-                        Text("\(v.0)")
-                        Spacer()
-                      
-                        }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                        .background(Color.red)
-                        }
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.yellow)
-                        .frame(width: 200, height: 200)
-
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.red)
-                        .frame(width: 80, height: 80)
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.green)
-                        .frame(width: 40, height: 40)
-                }
-
-            }
-        }
-}
-
-
 struct ContentView : View {
+    @State private var selected = 3
     var body: some View {
-        AdaptView()
-    }
+            TabView(selection: $selected) {
+                VStack {
+                    Text("hello")
+                    Text("Nice")
+                }
+                    .tabItem {
+                        Image(systemName: "1.square.fill")
+                        Text("First")
+                }.tag(0)
+                Text("Another Tab")
+                    .tabItem {
+                        Image(systemName: "2.square.fill")
+                        Text("Second")
+                    }.tag(1)
+                Text("The Last Tab")
+                    .tabItem {
+                        Image(systemName: "3.square.fill")
+                        Text("Third")
+                    }.tag(2)
+                Text("The Last Tab")
+                    .tabItem {
+                        if selected == 3 {
+                            Image(systemName: "square.and.arrow.up")
+                        } else{
+                              Image(systemName: "4.square.fill")
+                        }
+                        Text("Forth")
+                }.tag(3)
+            }
+            .font(.headline)
+            .accentColor(.black)
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {
