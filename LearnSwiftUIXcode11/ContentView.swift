@@ -14,42 +14,43 @@ struct AdaptView : View{
         
     let products = [
       ("Mac", "desktopcomputer"),
-      ("iPhone", "iphone"),
-      ("Airpods", "airpodspro")
+      ("iPhone", "desktopcomputer"),
+      ("Airpods", "desktopcomputer")
     ]
-    func product(_ item: (String, String)) -> some View {
-        HStack{
-            Image(systemName: item.1)
-                .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.blue)
-                .cornerRadius(7)
-            
-            Text("\(item.0)")
-            Spacer()
-          
-        }
-        .padding(EdgeInsets(top: 1, leading: 15, bottom: 0, trailing: 15))
-          
-    }
+
     var body: some View {
-        if verticalSizeClass == .regular{
-            VStack{
+            VStack(spacing: 0){
                 ForEach(products, id:\.0) { v in
-                          product(v)
+                    HStack{
+                        Image(systemName: v.1)
+                            .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(7)
+                        
+                        Text("\(v.0)")
+                        Spacer()
+                      
                         }
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        .background(Color.red)
+                        }
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.yellow)
+                        .frame(width: 200, height: 200)
 
-            }
-        }else{
-            HStack{
-                ForEach(products, id:\.0) { v in
-                          product(v)
-                        }
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.red)
+                        .frame(width: 80, height: 80)
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.green)
+                        .frame(width: 40, height: 40)
+                }
 
             }
         }
-    }
 }
 
 
