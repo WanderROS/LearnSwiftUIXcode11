@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             print("!!!!!!ELSE ENV!!!!!!")
         #endif
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView(data:"ttes")
+        let contentView = ContentView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

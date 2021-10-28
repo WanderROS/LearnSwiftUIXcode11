@@ -9,48 +9,54 @@
 import SwiftUI
 import Combine
 
-struct DetailView : View {
-    @State private var data : Int = 0
+struct AdaptView : View{
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+        
+    let products = [
+      ("Mac", "desktopcomputer"),
+      ("iPhone", "iphone"),
+      ("Airpods", "airpodspro")
+    ]
+    func product(_ item: (String, String)) -> some View {
+        HStack{
+            Image(systemName: item.1)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(8)
+            Text("\(item.0)")
+          
+        }
+          
+    }
     var body: some View {
-        VStack {
-            Text("\(data)")
-            Button("++"){
-                data = data + 1
+        if verticalSizeClass == .regular{
+            VStack{
+                ForEach(products, id:\.0) { v in
+                          product(v)
+                        }
+
+            }
+        }else{
+            HStack{
+                ForEach(products, id:\.0) { v in
+                          product(v)
+                        }
+
             }
         }
     }
-    init(data:Int) {
-        self.data = data
-    }
-    
 }
 
 
-
 struct ContentView : View {
-    
-    @State var data: String
-    @State var cancellables = Set<AnyCancellable>()
     var body: some View {
-        VStack{
-            Text("Hello")
-            let a = 100
-            DetailView(data: a)
-            TextField("test", text: $data)
-            Button(action: {
-                NetworkService.shared.getWebData().sink(receiveCompletion: {_ in
-                }) { (value) in
-                    self.data = value
-                }.store(in: &self.cancellables)
-            }) {
-                Text(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/)
-            }
-        }
+        AdaptView()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(data: "Hello")
+        ContentView()
     }
 }
