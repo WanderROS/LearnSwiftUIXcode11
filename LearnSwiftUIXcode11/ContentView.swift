@@ -9,6 +9,23 @@
 import SwiftUI
 import Combine
 
+struct DetailView : View {
+    @State private var data : Int = 0
+    var body: some View {
+        VStack {
+            Text("\(data)")
+            Button("++"){
+                data = data + 1
+            }
+        }
+    }
+    init(data:Int) {
+        self.data = data
+    }
+    
+}
+
+
 
 struct ContentView : View {
     
@@ -17,7 +34,8 @@ struct ContentView : View {
     var body: some View {
         VStack{
             Text("Hello")
-            
+            let a = 100
+            DetailView(data: a)
             TextField("test", text: $data)
             Button(action: {
                 NetworkService.shared.getWebData().sink(receiveCompletion: {_ in
