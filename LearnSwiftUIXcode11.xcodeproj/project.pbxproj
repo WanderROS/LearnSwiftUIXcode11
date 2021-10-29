@@ -47,7 +47,7 @@
 		C11D5380271DAE0A00604F15 /* dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11D5383271DAE0A00604F15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C11D5385271DAE0A00604F15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C11D5387271DAE0A00604F15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C11D5387271DAE0A00604F15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../ContentView.swift; sourceTree = "<group>"; };
 		C11D5389271DAE0B00604F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C11D538C271DAE0B00604F15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C11D538F271DAE0B00604F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -508,7 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUIXcode11/Preview Content\"";
-				DEVELOPMENT_TEAM = Z8D49D4M8N;
+				DEVELOPMENT_TEAM = 4D7NSSCG7J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LearnSwiftUIXcode11/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -516,7 +516,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "-D DEV";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode111;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode1111;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -529,7 +529,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUIXcode11/Preview Content\"";
-				DEVELOPMENT_TEAM = Z8D49D4M8N;
+				DEVELOPMENT_TEAM = 4D7NSSCG7J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LearnSwiftUIXcode11/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -537,7 +537,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "-D DEV";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode111;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode1111;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
