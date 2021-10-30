@@ -5,12 +5,14 @@ PODS:
   - EFQRCode (6.1.0):
     - swift_qrcodejs (~> 2.2.2)
   - Hue (5.0.0)
+  - ImagePicker (3.2.0)
   - OAuthSwift (2.2.0)
 
 DEPENDENCIES:
   - Charts
   - EFQRCode (~> 6.1.0)
   - Hue
+  - ImagePicker
   - OAuthSwift (~> 2.2.0)
 
 SPEC REPOS:
@@ -18,14 +20,16 @@ SPEC REPOS:
     - Charts
     - EFQRCode
     - Hue
+    - ImagePicker
     - OAuthSwift
 
 SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   EFQRCode: 994654b3ad1657ab751b92422cef8b8f7d1b1496
   Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
+  ImagePicker: 1d950bbb2422548ed58791b4ec7f42fe42920511
   OAuthSwift: 75efbb5bd9a4b2b71a37bd7e986bf3f55ddd54c6
 
-PODFILE CHECKSUM: 81acf54bca70db5396fdaf737fc86212f73b9842
+PODFILE CHECKSUM: 43a6ca48d6e3a285bed6c23a2366e66247bd315a
 
 COCOAPODS: 1.11.2

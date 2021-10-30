@@ -2,4 +2,5 @@ ${PODS_ROOT}/Target Support Files/Pods-dev/Pods-dev-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
 ${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework
 ${BUILT_PRODUCTS_DIR}/Hue/Hue.framework
+${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework
 ${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework

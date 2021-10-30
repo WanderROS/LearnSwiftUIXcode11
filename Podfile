@@ -9,6 +9,7 @@ target 'dev' do
   pod 'Hue'
   pod 'OAuthSwift', '~> 2.2.0'
   pod 'Charts'
+  pod 'ImagePicker'
   # Pods for dev
 
 end
