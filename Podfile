@@ -6,6 +6,9 @@ target 'dev' do
   use_frameworks!
   
   pod 'EFQRCode', '~> 6.1.0'
+  pod 'Hue'
+  pod 'OAuthSwift', '~> 2.2.0'
+  pod 'Charts'
   # Pods for dev
 
 end
