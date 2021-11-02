@@ -5,11 +5,11 @@ target 'dev' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   
-  pod 'EFQRCode', '~> 6.1.0'
-  pod 'Hue'
-  pod 'OAuthSwift', '~> 2.2.0'
-  pod 'Charts'
-  pod 'ImagePicker'
+#  pod 'EFQRCode', '~> 6.1.0'
+#  pod 'Hue'
+#  pod 'OAuthSwift', '~> 2.2.0'
+#  pod 'Charts'
+#  pod 'ImagePicker'
   # Pods for dev
 
 end
