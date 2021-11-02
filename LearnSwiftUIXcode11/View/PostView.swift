@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct PostView: View {
-    @ObservedObject var model = PostViewModel()
+    @EnvironmentObject var model : PostViewModel
     @State private var num: Int = 1
     var body: some View {
         List{
             VStack(alignment: .leading) {
-                Text(model.article.title)
+                Text(model.article.title).bold()
                 Text(model.article.description)
                     .foregroundColor(.secondary)
             }

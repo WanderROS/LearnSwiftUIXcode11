@@ -11,6 +11,7 @@ import Foundation
 class PostViewModel: ObservableObject{
     
     init(){
+        print("postview model 初始化！！！！！")
         getPost(id: 1)
     }
     
