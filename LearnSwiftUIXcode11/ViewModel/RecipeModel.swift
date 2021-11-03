@@ -8,13 +8,11 @@
 
 import Foundation
 
-class RecipeModel: ObservableObject{
-    @Published var recipes = [String]()
-    var id = UUID()
+struct RecipeModel: Identifiable, Codable {
     
-    init(){
-        DispatchQueue.main.asyncAfter(deadline: .now()+3.0){
-            self.recipes.append(contentsOf:["Porks","Beef","Chinese Tea"])
-        }
-    }
+    var id = UUID()
+    var name = ""
+    var origin = ""
+    var countryCode = ""
+    var favourite = false
 }
