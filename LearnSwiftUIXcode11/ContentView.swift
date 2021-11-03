@@ -11,18 +11,8 @@ import Foundation
 import SwiftUI
 
 struct ContentView: View {
-    @State private var num: Int = 1
     var body: some View {
-        List{
-            Button("加一"){
-                self.num += 1
-            }
-            Button("减一"){
-                self.num -= 1
-                if self.num <= 1{
-                    self.num = 1
-                }            }
-        }
+        RecipeView()
     }
 }
 

@@ -34,6 +34,10 @@
 		C17AA9EE2722ACE7003EC7F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11D538C271DAE0B00604F15 /* Preview Assets.xcassets */; };
 		C17AA9EF2722ACE7003EC7F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11D5389271DAE0B00604F15 /* Assets.xcassets */; };
 		C1A7EB582732243200634EF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7EB572732243200634EF9 /* ContentView.swift */; };
+		C1A7EB5A2732491000634EF9 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7EB592732491000634EF9 /* RecipeView.swift */; };
+		C1A7EB5B2732491000634EF9 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7EB592732491000634EF9 /* RecipeView.swift */; };
+		C1A7EB5D273249AF00634EF9 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7EB5C273249AF00634EF9 /* RecipeModel.swift */; };
+		C1A7EB5E273249AF00634EF9 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7EB5C273249AF00634EF9 /* RecipeModel.swift */; };
 		C1FBCA312721290A005A2C76 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1FBCA302721290A005A2C76 /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +83,8 @@
 		C17AA9F32722ACE7003EC7F1 /* sit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17AA9F42722ACE8003EC7F1 /* LearnSwiftUIXcode11 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LearnSwiftUIXcode11 copy-Info.plist"; path = "/Users/wander/Desktop/Swift/LearnSwiftUIXcode11/LearnSwiftUIXcode11 copy-Info.plist"; sourceTree = "<absolute>"; };
 		C1A7EB572732243200634EF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C1A7EB592732491000634EF9 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		C1A7EB5C273249AF00634EF9 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		D3C71C1F551F1620B0BA48C1 /* Pods_dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBBD0B6C56FDD16A9ED8FA1 /* Pods-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.release.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.release.xcconfig"; sourceTree = "<group>"; };
 		ED5C0D0661AB0C31A7B3381F /* Pods_sit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				C177DF922731658A0061F97F /* PostView.swift */,
+				C1A7EB592732491000634EF9 /* RecipeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +238,7 @@
 			children = (
 				C177DF88273162D20061F97F /* PostModel.swift */,
 				C177DF8F273164B90061F97F /* PostViewModel.swift */,
+				C1A7EB5C273249AF00634EF9 /* RecipeModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -461,9 +469,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C177DF90273164B90061F97F /* PostViewModel.swift in Sources */,
+				C1A7EB5D273249AF00634EF9 /* RecipeModel.swift in Sources */,
 				C14B67A527299D6D00BFF2DA /* QueryDataModel.swift in Sources */,
 				C177DF89273162D20061F97F /* PostModel.swift in Sources */,
 				C11D5384271DAE0A00604F15 /* AppDelegate.swift in Sources */,
+				C1A7EB5A2732491000634EF9 /* RecipeView.swift in Sources */,
 				C177DF8D273163A60061F97F /* NetworkManager.swift in Sources */,
 				C1A7EB582732243200634EF9 /* ContentView.swift in Sources */,
 				C177DF862731621F0061F97F /* PostResponse.swift in Sources */,
@@ -498,7 +508,9 @@
 				C17AA9E72722ACE7003EC7F1 /* AppDelegate.swift in Sources */,
 				C177DF8A273162D20061F97F /* PostModel.swift in Sources */,
 				C17AA9E82722ACE7003EC7F1 /* SceneDelegate.swift in Sources */,
+				C1A7EB5B2732491000634EF9 /* RecipeView.swift in Sources */,
 				C177DF872731621F0061F97F /* PostResponse.swift in Sources */,
+				C1A7EB5E273249AF00634EF9 /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
