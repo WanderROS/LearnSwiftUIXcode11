@@ -16,13 +16,16 @@ struct RecipeView: View{
     var body: some View{
         Group{
          
-            VStack(alignment: .leading){
-                Text("\(recipe.name)")
-                    .font(.headline)
-                    .foregroundColor(Color.blue)
-                .bold()
-                
+            HStack{
                 Image(recipe.countryCode)
+                       .resizable()
+                           .frame(width: 20, height: 20)
+                Text("\(recipe.name)")
+                    .font(.subheadline)
+                    .foregroundColor(Color.blue)
+                    .bold()
+                
+       
             }
             
             VStack(alignment: .trailing, spacing: 10){

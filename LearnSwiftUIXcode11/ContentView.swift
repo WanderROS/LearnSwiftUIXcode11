@@ -18,7 +18,8 @@ struct ContentView: View {
             Picker(selection: $viewIndex, label: Text("")){
                 Text("Recipes").tag(0)
                 Text("Favourites").tag(1)
-            }.pickerStyle(SegmentedPickerStyle())
+            }
+             .pickerStyle(SegmentedPickerStyle())
             if viewIndex == 0 {
                 List(recipes,id:\.id){
                     recipe in
