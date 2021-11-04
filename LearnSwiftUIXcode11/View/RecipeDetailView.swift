@@ -19,10 +19,11 @@ struct RecipeDetailView: View{
     @EnvironmentObject var appData: AppData
     var body: some View{
         VStack(alignment: .leading, spacing: 15) {
-            Image(recipe.countryCode)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth: .infinity, maxHeight: 200)
+            
+            Image(uiImage: recipe.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: .infinity, maxHeight: 200)
             
             HStack {
                            // Name of our recipe
@@ -35,7 +36,7 @@ struct RecipeDetailView: View{
                            Button(action: {
                                self.appData.fontColor = self.isFavorite ? .orange : .black
                                self.recipe.favourite.toggle()
-                               self.appData.updateRecipe(recipe: self.recipe)
+                            //   self.appData.updateRecipe(recipe: self.recipe)
                            }) {
                             Image(systemName: isFavorite ? "star.fill" : "star")
                            }

@@ -29,6 +29,7 @@ class AppData: ObservableObject {
 struct ContentView: View {
     @State private var viewIndex = 0
     @EnvironmentObject var appData: AppData
+    @State private var showAddRecipe = false
     
         var body: some View {
             NavigationView {
@@ -42,7 +43,7 @@ struct ContentView: View {
                         List(appData.recipes, id: \.id) { recipe in
                             NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                                 RecipeView(recipe: recipe)
-                                    .navigationBarTitle(Text("Recipes"))
+                                    .navigationBarTitle(Text(""))
                             }
                         }
                     } else if viewIndex == 1 {
@@ -56,7 +57,18 @@ struct ContentView: View {
                     }
                     
                 }
-                .navigationBarTitle(Text("My Favourite Recipes"))
+                 .navigationBarTitle(Text(""), displayMode: .inline) // Hack due to bug in Xcode!
+                .navigationBarItems(trailing:
+                    Button(action: {
+                        self.showAddRecipe.toggle()
+                    }) {
+                        Image(systemName: "plus")
+                        .renderingMode(.original)
+                    }.sheet(isPresented: $showAddRecipe) {
+                        AddRecipeView().environmentObject(self.appData)
+                    }
+                )
+                
             }
         
     }

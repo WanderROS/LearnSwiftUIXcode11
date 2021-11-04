@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct RecipeModel: Identifiable, Codable {
     
@@ -17,4 +18,13 @@ struct RecipeModel: Identifiable, Codable {
     var favourite = false
     var ingredients = [String]()
     var recipe = ""
+    var imageData: Data?
+    var image: UIImage {
+        if let dataImage = UIImage(data: imageData ?? Data()) {
+            return dataImage
+        } else if let countryImage = UIImage(named: countryCode) {
+            return countryImage
+        }
+        return UIImage()
+    }
 }

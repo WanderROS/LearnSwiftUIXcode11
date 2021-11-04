@@ -42,6 +42,10 @@
 		C1A7EB6127335DE200634EF9 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7EB5F27335DE200634EF9 /* RecipeDetailView.swift */; };
 		C1A9C1862732C1D200D2944B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A9C1852732C1D200D2944B /* Helper.swift */; };
 		C1A9C1872732C1D200D2944B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A9C1852732C1D200D2944B /* Helper.swift */; };
+		C1B8771C27341E4400EE9698 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B8771B27341E4400EE9698 /* AddRecipeView.swift */; };
+		C1B8771D27341E4400EE9698 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B8771B27341E4400EE9698 /* AddRecipeView.swift */; };
+		C1B8771F2734216500EE9698 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B8771E2734216500EE9698 /* ImagePickerViewController.swift */; };
+		C1B877202734216500EE9698 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B8771E2734216500EE9698 /* ImagePickerViewController.swift */; };
 		C1FBCA312721290A005A2C76 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1FBCA302721290A005A2C76 /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +95,8 @@
 		C1A7EB5C273249AF00634EF9 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		C1A7EB5F27335DE200634EF9 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		C1A9C1852732C1D200D2944B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		C1B8771B27341E4400EE9698 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
+		C1B8771E2734216500EE9698 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		D3C71C1F551F1620B0BA48C1 /* Pods_dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBBD0B6C56FDD16A9ED8FA1 /* Pods-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.release.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.release.xcconfig"; sourceTree = "<group>"; };
 		ED5C0D0661AB0C31A7B3381F /* Pods_sit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +242,8 @@
 				C177DF922731658A0061F97F /* PostView.swift */,
 				C1A7EB592732491000634EF9 /* RecipeView.swift */,
 				C1A7EB5F27335DE200634EF9 /* RecipeDetailView.swift */,
+				C1B8771B27341E4400EE9698 /* AddRecipeView.swift */,
+				C1B8771E2734216500EE9698 /* ImagePickerViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -476,11 +484,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1B8771C27341E4400EE9698 /* AddRecipeView.swift in Sources */,
 				C177DF90273164B90061F97F /* PostViewModel.swift in Sources */,
 				C1A7EB5D273249AF00634EF9 /* RecipeModel.swift in Sources */,
 				C1A7EB6027335DE200634EF9 /* RecipeDetailView.swift in Sources */,
 				C14B67A527299D6D00BFF2DA /* QueryDataModel.swift in Sources */,
 				C177DF89273162D20061F97F /* PostModel.swift in Sources */,
+				C1B8771F2734216500EE9698 /* ImagePickerViewController.swift in Sources */,
 				C11D5384271DAE0A00604F15 /* AppDelegate.swift in Sources */,
 				C1A7EB5A2732491000634EF9 /* RecipeView.swift in Sources */,
 				C177DF8D273163A60061F97F /* NetworkManager.swift in Sources */,
@@ -514,10 +524,12 @@
 			files = (
 				C177DF8E273163A60061F97F /* NetworkManager.swift in Sources */,
 				C177DF91273164B90061F97F /* PostViewModel.swift in Sources */,
+				C1B8771D27341E4400EE9698 /* AddRecipeView.swift in Sources */,
 				C177DF942731658A0061F97F /* PostView.swift in Sources */,
 				C17AA9E72722ACE7003EC7F1 /* AppDelegate.swift in Sources */,
 				C177DF8A273162D20061F97F /* PostModel.swift in Sources */,
 				C17AA9E82722ACE7003EC7F1 /* SceneDelegate.swift in Sources */,
+				C1B877202734216500EE9698 /* ImagePickerViewController.swift in Sources */,
 				C1A7EB5B2732491000634EF9 /* RecipeView.swift in Sources */,
 				C1A7EB6127335DE200634EF9 /* RecipeDetailView.swift in Sources */,
 				C1A9C1872732C1D200D2944B /* Helper.swift in Sources */,

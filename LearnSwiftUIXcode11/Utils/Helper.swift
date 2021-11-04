@@ -75,4 +75,33 @@ struct Helper{
         
         UserDefaults.standard.set(data,forKey: "favorites")
     }
+    
+    static func getCountries() -> [String] {
+        return ["Italy", "Greece", "UK", "China", "France", "USA", "Mexico", "Spain"]
+    }
+    
+    static func getCountryCode(country: String) -> String {
+        switch country {
+        case "Italy":
+            return "IT"
+        case "Greece":
+            return "GR"
+        case "UK":
+            return "GB"
+        case "China":
+            return "CN"
+        case "Mexico":
+            return "MX"
+        case "France":
+            return "FR"
+        case "USA":
+            return "US"
+        case "Spain":
+            return "ES"
+        default:
+            return ""
+        }
+    }
+    
+    
 }

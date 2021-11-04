@@ -14,30 +14,19 @@ struct RecipeView: View{
     @State var recipe = RecipeModel()
     
     var body: some View{
-        Group{
-         
-            HStack{
-                Image(recipe.countryCode)
-                       .resizable()
-                           .frame(width: 20, height: 20)
+
+        Group {
+            VStack(alignment: .leading) {
                 Text("\(recipe.name)")
-                    .font(.subheadline)
+                    .font(.headline)
                     .foregroundColor(Color.blue)
                     .bold()
-                
-       
+                Image(uiImage: recipe.image).resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 30)
             }
-            
-            VStack(alignment: .trailing, spacing: 10){
-                Button(action:{
-                    Helper.addRemoveFavorite(recipe: self.recipe)
-                    self.recipe.favourite.toggle()
-                }){
-                    Image(systemName: Helper.isFavorite(name: recipe.name) ? "star.fill": "star")
-                }
-            }
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .trailing)
         }
+        
     }
 }
 
