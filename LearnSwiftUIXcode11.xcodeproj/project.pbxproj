@@ -38,6 +38,8 @@
 		C1A7EB5B2732491000634EF9 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7EB592732491000634EF9 /* RecipeView.swift */; };
 		C1A7EB5D273249AF00634EF9 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7EB5C273249AF00634EF9 /* RecipeModel.swift */; };
 		C1A7EB5E273249AF00634EF9 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7EB5C273249AF00634EF9 /* RecipeModel.swift */; };
+		C1A7EB6027335DE200634EF9 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7EB5F27335DE200634EF9 /* RecipeDetailView.swift */; };
+		C1A7EB6127335DE200634EF9 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7EB5F27335DE200634EF9 /* RecipeDetailView.swift */; };
 		C1A9C1862732C1D200D2944B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A9C1852732C1D200D2944B /* Helper.swift */; };
 		C1A9C1872732C1D200D2944B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A9C1852732C1D200D2944B /* Helper.swift */; };
 		C1FBCA312721290A005A2C76 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1FBCA302721290A005A2C76 /* Alamofire */; };
@@ -87,6 +89,7 @@
 		C1A7EB572732243200634EF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C1A7EB592732491000634EF9 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		C1A7EB5C273249AF00634EF9 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		C1A7EB5F27335DE200634EF9 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		C1A9C1852732C1D200D2944B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		D3C71C1F551F1620B0BA48C1 /* Pods_dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBBD0B6C56FDD16A9ED8FA1 /* Pods-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.release.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.release.xcconfig"; sourceTree = "<group>"; };
@@ -232,6 +235,7 @@
 			children = (
 				C177DF922731658A0061F97F /* PostView.swift */,
 				C1A7EB592732491000634EF9 /* RecipeView.swift */,
+				C1A7EB5F27335DE200634EF9 /* RecipeDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -474,6 +478,7 @@
 			files = (
 				C177DF90273164B90061F97F /* PostViewModel.swift in Sources */,
 				C1A7EB5D273249AF00634EF9 /* RecipeModel.swift in Sources */,
+				C1A7EB6027335DE200634EF9 /* RecipeDetailView.swift in Sources */,
 				C14B67A527299D6D00BFF2DA /* QueryDataModel.swift in Sources */,
 				C177DF89273162D20061F97F /* PostModel.swift in Sources */,
 				C11D5384271DAE0A00604F15 /* AppDelegate.swift in Sources */,
@@ -514,6 +519,7 @@
 				C177DF8A273162D20061F97F /* PostModel.swift in Sources */,
 				C17AA9E82722ACE7003EC7F1 /* SceneDelegate.swift in Sources */,
 				C1A7EB5B2732491000634EF9 /* RecipeView.swift in Sources */,
+				C1A7EB6127335DE200634EF9 /* RecipeDetailView.swift in Sources */,
 				C1A9C1872732C1D200D2944B /* Helper.swift in Sources */,
 				C177DF872731621F0061F97F /* PostResponse.swift in Sources */,
 				C1A7EB5E273249AF00634EF9 /* RecipeModel.swift in Sources */,
@@ -676,7 +682,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "-D DEV";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode12;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -698,7 +704,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "-D DEV";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode12;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wanderros.LearnSwiftUIXcode13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

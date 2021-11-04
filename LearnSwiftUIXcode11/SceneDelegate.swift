@@ -28,7 +28,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             print("!!!!!!ELSE ENV!!!!!!")
         #endif
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let appData = AppData()
+        appData.recipes = Helper.mockRecipes()
+        
+        let contentView = ContentView().environmentObject(appData)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
