@@ -30,15 +30,35 @@ struct ContentView: View {
     @State private var viewIndex = 0
     @EnvironmentObject var appData: AppData
     @State private var showAddRecipe = false
-    
+    @State private var boolAnimation : Bool = false
+    @State private var searchText : String = "hello"
         var body: some View {
             NavigationView {
                 VStack {
+                    Anything(UIActivityIndicatorView(style: .large)) {
+                        if self.boolAnimation {
+                            $0.startAnimating()
+                        } else {
+                            $0.stopAnimating()
+                        }
+                    }
+                    
+                    Text("\(searchText)")
+                        ActivityIndicator(boolStart: self.boolAnimation)
+                            .padding()
+                        Button(action: {
+                            self.boolAnimation = !self.boolAnimation
+                            print("按下反转")
+                        }, label: {
+                            Text("反转").padding()
+                        })
+                    SearchBarView(text: self.$searchText, placeholder: "输入内容").padding()
+                
                     Picker(selection: $viewIndex, label: Text("")) {
                         Text("Recipes").tag(0)
                         Text("Favourites").tag(1)
                     }.pickerStyle(SegmentedPickerStyle())
-                    
+
                     if viewIndex == 0 {
                         List(appData.recipes, id: \.id) { recipe in
                             NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
@@ -47,7 +67,7 @@ struct ContentView: View {
                             }
                         }
                     } else if viewIndex == 1 {
-                        
+
                         List(appData.favourites, id: \.id) { recipe in
                             NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
                                 RecipeView(recipe: recipe)
@@ -55,7 +75,7 @@ struct ContentView: View {
                             }
                         }
                     }
-                    
+
                 }
                  .navigationBarTitle(Text(""), displayMode: .inline) // Hack due to bug in Xcode!
                 .navigationBarItems(trailing:
