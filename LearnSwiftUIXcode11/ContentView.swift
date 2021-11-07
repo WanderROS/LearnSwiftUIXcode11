@@ -33,7 +33,8 @@ struct ContentView: View {
     @State private var boolAnimation : Bool = false
     @State private var searchText : String = "hello"
         var body: some View {
-            NavigationView {
+            PageControlExampleView()
+      /*      NavigationView {
                 VStack {
                     NavigationView{
                         NavigationLink(destination: TimelineTableViewControllerView()){
@@ -87,6 +88,7 @@ struct ContentView: View {
                 )
                 
             }
+ */
         
     }
 }

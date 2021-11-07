@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-dev/Pods-dev-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework
+${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework
 ${BUILT_PRODUCTS_DIR}/TimelineTableViewCell/TimelineTableViewCell.framework
 ${BUILT_PRODUCTS_DIR}/pop/pop.framework
