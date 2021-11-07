@@ -4,6 +4,7 @@
 target 'dev' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  pod 'pop'
   pod "ESTabBarController-swift"
 #  pod 'EFQRCode', '~> 6.1.0'
 #  pod 'Hue'
