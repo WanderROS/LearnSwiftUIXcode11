@@ -36,8 +36,8 @@ struct ContentView: View {
             NavigationView {
                 VStack {
                     NavigationView{
-                        NavigationLink(destination: ESTabBarView()){
-                            Text("跳转").padding()
+                        NavigationLink(destination: TimelineTableViewControllerView()){
+                            Text("跳转").padding().background(Color.red).padding()
                         }
                     }
                     Text("\(searchText)")
