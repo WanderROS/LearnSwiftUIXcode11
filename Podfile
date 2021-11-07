@@ -4,7 +4,7 @@
 target 'dev' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  
+  pod "ESTabBarController-swift"
 #  pod 'EFQRCode', '~> 6.1.0'
 #  pod 'Hue'
 #  pod 'OAuthSwift', '~> 2.2.0'

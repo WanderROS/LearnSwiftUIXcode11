@@ -35,14 +35,11 @@ struct ContentView: View {
         var body: some View {
             NavigationView {
                 VStack {
-                    Anything(UIActivityIndicatorView(style: .large)) {
-                        if self.boolAnimation {
-                            $0.startAnimating()
-                        } else {
-                            $0.stopAnimating()
+                    NavigationView{
+                        NavigationLink(destination: ESTabBarView()){
+                            Text("跳转").padding()
                         }
                     }
-                    
                     Text("\(searchText)")
                         ActivityIndicator(boolStart: self.boolAnimation)
                             .padding()

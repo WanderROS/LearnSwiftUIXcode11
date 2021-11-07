@@ -16,6 +16,8 @@
 		C11D5390271DAE0B00604F15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11D538E271DAE0B00604F15 /* LaunchScreen.storyboard */; };
 		C11D539B271DAE0B00604F15 /* LearnSwiftUIXcode11Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D539A271DAE0B00604F15 /* LearnSwiftUIXcode11Tests.swift */; };
 		C11D53A6271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D53A5271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.swift */; };
+		C12C096727376B85002987E3 /* ESTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12C096627376B85002987E3 /* ESTabBarView.swift */; };
+		C12C096827376B85002987E3 /* ESTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12C096627376B85002987E3 /* ESTabBarView.swift */; };
 		C14B67A527299D6D00BFF2DA /* QueryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14B67A427299D6D00BFF2DA /* QueryDataModel.swift */; };
 		C177DF862731621F0061F97F /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C177DF852731621F0061F97F /* PostResponse.swift */; };
 		C177DF872731621F0061F97F /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C177DF852731621F0061F97F /* PostResponse.swift */; };
@@ -90,6 +92,7 @@
 		C11D53A1271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnSwiftUIXcode11UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11D53A5271DAE0B00604F15 /* LearnSwiftUIXcode11UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwiftUIXcode11UITests.swift; sourceTree = "<group>"; };
 		C11D53A7271DAE0C00604F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C12C096627376B85002987E3 /* ESTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESTabBarView.swift; sourceTree = "<group>"; };
 		C14B67A427299D6D00BFF2DA /* QueryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryDataModel.swift; sourceTree = "<group>"; };
 		C177DF852731621F0061F97F /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		C177DF88273162D20061F97F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
@@ -260,6 +263,7 @@
 				C1AF70162735F67300AAE4AD /* ActivityIndicator.swift */,
 				C1AF701C2735FD8400AAE4AD /* SearchBarView.swift */,
 				C1AF701F2736163500AAE4AD /* Anything.swift */,
+				C12C096627376B85002987E3 /* ESTabBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +298,7 @@
 				C11D537C271DAE0A00604F15 /* Sources */,
 				C11D537D271DAE0A00604F15 /* Frameworks */,
 				C11D537E271DAE0A00604F15 /* Resources */,
+				ABF0AB0E9D16D0714978BD72 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -493,6 +498,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ABF0AB0E9D16D0714978BD72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dev/Pods-dev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dev/Pods-dev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dev/Pods-dev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -512,6 +534,7 @@
 				C1AF70202736163500AAE4AD /* Anything.swift in Sources */,
 				C1A7EB5A2732491000634EF9 /* RecipeView.swift in Sources */,
 				C1AF701D2735FD8400AAE4AD /* SearchBarView.swift in Sources */,
+				C12C096727376B85002987E3 /* ESTabBarView.swift in Sources */,
 				C177DF8D273163A60061F97F /* NetworkManager.swift in Sources */,
 				C1A7EB582732243200634EF9 /* ContentView.swift in Sources */,
 				C177DF862731621F0061F97F /* PostResponse.swift in Sources */,
@@ -544,6 +567,7 @@
 			files = (
 				C177DF8E273163A60061F97F /* NetworkManager.swift in Sources */,
 				C177DF91273164B90061F97F /* PostViewModel.swift in Sources */,
+				C12C096827376B85002987E3 /* ESTabBarView.swift in Sources */,
 				C1B8771D27341E4400EE9698 /* AddRecipeView.swift in Sources */,
 				C177DF942731658A0061F97F /* PostView.swift in Sources */,
 				C1AF70212736163500AAE4AD /* Anything.swift in Sources */,

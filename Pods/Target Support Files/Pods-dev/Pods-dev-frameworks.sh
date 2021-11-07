@@ -176,18 +176,10 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Hue/Hue.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Hue/Hue.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

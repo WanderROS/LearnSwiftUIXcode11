@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appData.recipes = Helper.mockRecipes()
         
         let contentView = ContentView().environmentObject(appData)
-
+ //       let contentView = ESTabBarView()
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
