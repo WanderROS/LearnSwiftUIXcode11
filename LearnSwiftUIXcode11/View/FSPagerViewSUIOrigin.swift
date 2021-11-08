@@ -77,6 +77,9 @@ public struct FSPagerViewSUIOrigin<Data: Identifiable, Cell: View>: UIViewRepres
         if pagerView.scrollDirection != scrollDirection {
             pagerView.scrollDirection = scrollDirection
         }
+        if pagerView.transformer != transformer {
+            pagerView.transformer = transformer
+        }
         if pagerView.automaticSlidingInterval != automaticSlidingInterval {
             pagerView.automaticSlidingInterval = automaticSlidingInterval
         }
