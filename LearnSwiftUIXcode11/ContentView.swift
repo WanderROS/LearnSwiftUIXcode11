@@ -52,6 +52,9 @@ struct ContentView: View {
                         maxHeight: .infinity
                     )
             }
+            .didSelect { (value) in
+                print("按中\(value)")
+            }
 
             VStack(alignment: .center, spacing: nil, content: {
                 FSPageControlSUI(currentPage: $currentPage)
