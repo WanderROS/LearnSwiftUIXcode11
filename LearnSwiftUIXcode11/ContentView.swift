@@ -25,77 +25,55 @@ class AppData: ObservableObject {
     
 }
 
-
 struct ContentView: View {
-    @State private var viewIndex = 0
-    @EnvironmentObject var appData: AppData
-    @State private var showAddRecipe = false
-    @State private var boolAnimation : Bool = false
-    @State private var searchText : String = "hello"
-        var body: some View {
-            PageControlExampleView()
-      /*      NavigationView {
-                VStack {
-                    NavigationView{
-                        NavigationLink(destination: TimelineTableViewControllerView()){
-                            Text("跳转").padding().background(Color.red).padding()
-                        }
-                    }
-                    Text("\(searchText)")
-                        ActivityIndicator(boolStart: self.boolAnimation)
-                            .padding()
-                        Button(action: {
-                            self.boolAnimation = !self.boolAnimation
-                            print("按下反转")
-                        }, label: {
-                            Text("反转").padding()
-                        })
-                    SearchBarView(text: self.$searchText, placeholder: "输入内容").padding()
-                
-                    Picker(selection: $viewIndex, label: Text("")) {
-                        Text("Recipes").tag(0)
-                        Text("Favourites").tag(1)
-                    }.pickerStyle(SegmentedPickerStyle())
+    private struct TutorialItem: Identifiable {
+        let id: UUID = UUID()
+        let image: String
+    }
 
-                    if viewIndex == 0 {
-                        List(appData.recipes, id: \.id) { recipe in
-                            NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
-                                RecipeView(recipe: recipe)
-                                    .navigationBarTitle(Text(""))
-                            }
-                        }
-                    } else if viewIndex == 1 {
-
-                        List(appData.favourites, id: \.id) { recipe in
-                            NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
-                                RecipeView(recipe: recipe)
-                                    .navigationBarTitle(Text("Favourites"))
-                            }
-                        }
-                    }
-
-                }
-                 .navigationBarTitle(Text(""), displayMode: .inline) // Hack due to bug in Xcode!
-                .navigationBarItems(trailing:
-                    Button(action: {
-                        self.showAddRecipe.toggle()
-                    }) {
-                        Image(systemName: "plus")
-                        .renderingMode(.original)
-                    }.sheet(isPresented: $showAddRecipe) {
-                        AddRecipeView().environmentObject(self.appData)
-                    }
-                )
-                
+    private let images: [TutorialItem] = [
+        TutorialItem(image: "1"),
+        TutorialItem(image: "2"),
+        TutorialItem(image: "3"),
+        TutorialItem(image: "4"),
+        TutorialItem(image: "5"),
+        TutorialItem(image: "6"),
+        TutorialItem(image: "7"),
+    ]
+    
+    @State var currentPage: Int = 0
+    var body: some View {
+        ZStack(content: {
+            FSPagerViewSUI($currentPage, images) { item in
+                Image(item.image)
+                    .resizable()
+                    .frame(
+                        maxWidth: .infinity,
+                        maxHeight: .infinity
+                    )
             }
- */
-        
+
+            VStack(alignment: .center, spacing: nil, content: {
+                FSPageControlSUI(currentPage: $currentPage)
+                    .numberOfPages(images.count)
+                    .contentHorizontalAlignment(.right)
+                    .contentInsets(UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 20)
+                .background(Color.black.opacity(0.5))
+            })
+            .frame(
+                maxWidth: .infinity,
+                maxHeight: .infinity,
+                alignment: .bottomTrailing
+            )
+        })
+        .aspectRatio(375.0/193.0, contentMode: .fit)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static let appData = AppData()
     static var previews: some View {
-        ContentView().environmentObject(appData)
+        ContentView()
     }
 }

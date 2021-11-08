@@ -21,6 +21,9 @@
 		C12C097027377ABD002987E3 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12C096F27377ABD002987E3 /* TimelineTableViewController.swift */; };
 		C12C097127377ABD002987E3 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12C096F27377ABD002987E3 /* TimelineTableViewController.swift */; };
 		C14B67A527299D6D00BFF2DA /* QueryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14B67A427299D6D00BFF2DA /* QueryDataModel.swift */; };
+		C151CB1D27395F9600B0AEC6 /* FSPageControlSUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C151CB1C27395F9600B0AEC6 /* FSPageControlSUI.swift */; };
+		C151CB1F27395FBA00B0AEC6 /* FSPagerViewSUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C151CB1E27395FBA00B0AEC6 /* FSPagerViewSUI.swift */; };
+		C151CB2127395FD100B0AEC6 /* FSPagerViewSUIOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C151CB2027395FD100B0AEC6 /* FSPagerViewSUIOrigin.swift */; };
 		C16A761B2737C88C008ED603 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A761A2737C88C008ED603 /* PictureView.swift */; };
 		C16A761C2737C88C008ED603 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A761A2737C88C008ED603 /* PictureView.swift */; };
 		C16A763C2737C9AC008ED603 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A76372737C9AB008ED603 /* TimelineTableViewCell.swift */; };
@@ -107,6 +110,9 @@
 		C12C096627376B85002987E3 /* ESTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESTabBarView.swift; sourceTree = "<group>"; };
 		C12C096F27377ABD002987E3 /* TimelineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
 		C14B67A427299D6D00BFF2DA /* QueryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryDataModel.swift; sourceTree = "<group>"; };
+		C151CB1C27395F9600B0AEC6 /* FSPageControlSUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPageControlSUI.swift; sourceTree = "<group>"; };
+		C151CB1E27395FBA00B0AEC6 /* FSPagerViewSUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPagerViewSUI.swift; sourceTree = "<group>"; };
+		C151CB2027395FD100B0AEC6 /* FSPagerViewSUIOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPagerViewSUIOrigin.swift; sourceTree = "<group>"; };
 		C16A761A2737C88C008ED603 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 		C16A76372737C9AB008ED603 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		C16A76382737C9AB008ED603 /* TimelinePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePoint.swift; sourceTree = "<group>"; };
@@ -290,6 +296,9 @@
 				C12C096627376B85002987E3 /* ESTabBarView.swift */,
 				C12C096F27377ABD002987E3 /* TimelineTableViewController.swift */,
 				C16A761A2737C88C008ED603 /* PictureView.swift */,
+				C151CB1C27395F9600B0AEC6 /* FSPageControlSUI.swift */,
+				C151CB1E27395FBA00B0AEC6 /* FSPagerViewSUI.swift */,
+				C151CB2027395FD100B0AEC6 /* FSPagerViewSUIOrigin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -559,6 +568,7 @@
 				C14B67A527299D6D00BFF2DA /* QueryDataModel.swift in Sources */,
 				C177DF89273162D20061F97F /* PostModel.swift in Sources */,
 				C16A76422737C9AC008ED603 /* Timeline.swift in Sources */,
+				C151CB2127395FD100B0AEC6 /* FSPagerViewSUIOrigin.swift in Sources */,
 				C16A763C2737C9AC008ED603 /* TimelineTableViewCell.swift in Sources */,
 				C1B8771F2734216500EE9698 /* ImagePickerViewController.swift in Sources */,
 				C11D5384271DAE0A00604F15 /* AppDelegate.swift in Sources */,
@@ -566,6 +576,7 @@
 				C1A7EB5A2732491000634EF9 /* RecipeView.swift in Sources */,
 				C1AF701D2735FD8400AAE4AD /* SearchBarView.swift in Sources */,
 				C16A761B2737C88C008ED603 /* PictureView.swift in Sources */,
+				C151CB1F27395FBA00B0AEC6 /* FSPagerViewSUI.swift in Sources */,
 				C12C096727376B85002987E3 /* ESTabBarView.swift in Sources */,
 				C177DF8D273163A60061F97F /* NetworkManager.swift in Sources */,
 				C1A7EB582732243200634EF9 /* ContentView.swift in Sources */,
@@ -575,6 +586,7 @@
 				C11D5386271DAE0A00604F15 /* SceneDelegate.swift in Sources */,
 				C1A9C1862732C1D200D2944B /* Helper.swift in Sources */,
 				C16A763E2737C9AC008ED603 /* TimelinePoint.swift in Sources */,
+				C151CB1D27395F9600B0AEC6 /* FSPageControlSUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
