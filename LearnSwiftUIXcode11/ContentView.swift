@@ -9,6 +9,7 @@
 import Foundation
 
 import SwiftUI
+import FSPagerView
 
 class AppData: ObservableObject {
     
@@ -47,23 +48,31 @@ struct ContentView: View {
             FSPagerViewSUI($currentPage, images) { item in
                 Image(item.image)
                     .resizable()
+                    .cornerRadius(10)
                     .frame(
                         maxWidth: .infinity,
                         maxHeight: .infinity
-                    )
+                ).padding([.horizontal],5)
             }
+            .itemSize(FSPagerView.automaticSize)
+            .decelerationDistance(1)
             .didSelect { (value) in
                 print("按中\(value)")
             }
+            .isInfinite(true)
+            .automaticSlidingInterval(3.0)
+            .transformer(FSPagerViewTransformer(type: .depth))
 
             VStack(alignment: .center, spacing: nil, content: {
                 FSPageControlSUI(currentPage: $currentPage)
                     .numberOfPages(images.count)
                     .contentHorizontalAlignment(.right)
                     .contentInsets(UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
+                    .setFillColor(UIColor.systemPink, for: .selected)
                     .frame(maxWidth: .infinity)
                     .frame(height: 20)
-                .background(Color.black.opacity(0.5))
+                    
+//                .background(Color.black.opacity(0.5))
             })
             .frame(
                 maxWidth: .infinity,
