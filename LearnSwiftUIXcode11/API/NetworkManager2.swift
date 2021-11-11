@@ -11,6 +11,7 @@ import Foundation
 import ObjectMapper
 import Moya
 import SwiftyJSON
+import ProgressHUD
 /// 超时时长
 private var requestTimeOut: Double = 30
 // 单个模型的成功回调 包括： 模型，网络请求的模型(code,message,data等，具体根据业务来定)
@@ -140,15 +141,20 @@ private let networkPlugin = NetworkActivityPlugin.init { changeType, _ in
     switch changeType {
     case .began:
         print("开始请求网络")
+        ProgressHUD.show(icon: .heart)
 
     case .ended:
         print("结束")
+        ProgressHUD.dismiss()
     }
 }
 
 /// https://github.com/Moya/Moya/blob/master/docs/Providers.md  参数使用说明
 /// 网络请求发送的核心初始化方法，创建网络请求对象
-fileprivate let Provider = MoyaProvider<MultiTarget>(endpointClosure: myEndpointClosure, requestClosure: requestClosure, plugins: [networkPlugin], trackInflights: false)
+let token = "eyeAm.AJsoN.weBTOKen"
+fileprivate let Provider = MoyaProvider<MultiTarget>(endpointClosure: myEndpointClosure, requestClosure: requestClosure, plugins: [networkPlugin,CredentialsPlugin { _ -> URLCredential? in
+    URLCredential(user: "user", password: "passwd", persistence: .none)
+},AccessTokenPlugin { _ in token }], trackInflights: false)
 
 /// 网络请求，当模型为dict类型
 /// - Parameters:

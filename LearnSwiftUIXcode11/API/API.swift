@@ -9,6 +9,7 @@
 import Foundation
 import Moya
 
+
 enum API{
     case updateAPi(parameters:[String:Any])
     case register(email:String,password:String)
