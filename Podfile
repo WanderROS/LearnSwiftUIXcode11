@@ -8,6 +8,9 @@ target 'dev' do
   pod 'TimelineTableViewCell'
   pod 'pop'
   pod "ESTabBarController-swift"
+  pod 'Moya'
+  pod 'ObjectMapper'
+  pod 'SwiftyJSON'
 #  pod 'EFQRCode', '~> 6.1.0'
 #  pod 'Hue'
 #  pod 'OAuthSwift', '~> 2.2.0'

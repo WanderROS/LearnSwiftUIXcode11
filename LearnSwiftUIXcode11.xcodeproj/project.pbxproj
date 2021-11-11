@@ -20,6 +20,12 @@
 		C12C096827376B85002987E3 /* ESTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12C096627376B85002987E3 /* ESTabBarView.swift */; };
 		C12C097027377ABD002987E3 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12C096F27377ABD002987E3 /* TimelineTableViewController.swift */; };
 		C12C097127377ABD002987E3 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12C096F27377ABD002987E3 /* TimelineTableViewController.swift */; };
+		C141CDE5273CC583006FB2A7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141CDE4273CC583006FB2A7 /* API.swift */; };
+		C141CDE6273CC583006FB2A7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141CDE4273CC583006FB2A7 /* API.swift */; };
+		C141CDE8273CC5A6006FB2A7 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141CDE7273CC5A6006FB2A7 /* MoyaConfig.swift */; };
+		C141CDE9273CC5A6006FB2A7 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141CDE7273CC5A6006FB2A7 /* MoyaConfig.swift */; };
+		C141CDEB273CC5BA006FB2A7 /* NetworkManager2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141CDEA273CC5BA006FB2A7 /* NetworkManager2.swift */; };
+		C141CDEC273CC5BA006FB2A7 /* NetworkManager2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141CDEA273CC5BA006FB2A7 /* NetworkManager2.swift */; };
 		C14B67A527299D6D00BFF2DA /* QueryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14B67A427299D6D00BFF2DA /* QueryDataModel.swift */; };
 		C151CB1D27395F9600B0AEC6 /* FSPageControlSUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C151CB1C27395F9600B0AEC6 /* FSPageControlSUI.swift */; };
 		C151CB1F27395FBA00B0AEC6 /* FSPagerViewSUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C151CB1E27395FBA00B0AEC6 /* FSPagerViewSUI.swift */; };
@@ -109,6 +115,9 @@
 		C11D53A7271DAE0C00604F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C12C096627376B85002987E3 /* ESTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESTabBarView.swift; sourceTree = "<group>"; };
 		C12C096F27377ABD002987E3 /* TimelineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
+		C141CDE4273CC583006FB2A7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C141CDE7273CC5A6006FB2A7 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
+		C141CDEA273CC5BA006FB2A7 /* NetworkManager2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager2.swift; sourceTree = "<group>"; };
 		C14B67A427299D6D00BFF2DA /* QueryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryDataModel.swift; sourceTree = "<group>"; };
 		C151CB1C27395F9600B0AEC6 /* FSPageControlSUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPageControlSUI.swift; sourceTree = "<group>"; };
 		C151CB1E27395FBA00B0AEC6 /* FSPagerViewSUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPagerViewSUI.swift; sourceTree = "<group>"; };
@@ -226,6 +235,7 @@
 		C11D5382271DAE0A00604F15 /* LearnSwiftUIXcode11 */ = {
 			isa = PBXGroup;
 			children = (
+				C141CDE3273CC531006FB2A7 /* API */,
 				C177DF8B2731635A0061F97F /* Utils */,
 				C177DF84273161D20061F97F /* ViewModel */,
 				C177DF83273161C50061F97F /* View */,
@@ -271,6 +281,16 @@
 				C11D53A7271DAE0C00604F15 /* Info.plist */,
 			);
 			path = LearnSwiftUIXcode11UITests;
+			sourceTree = "<group>";
+		};
+		C141CDE3273CC531006FB2A7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C141CDE4273CC583006FB2A7 /* API.swift */,
+				C141CDE7273CC5A6006FB2A7 /* MoyaConfig.swift */,
+				C141CDEA273CC5BA006FB2A7 /* NetworkManager2.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		C177DF82273161B70061F97F /* Model */ = {
@@ -573,8 +593,11 @@
 				C1B8771F2734216500EE9698 /* ImagePickerViewController.swift in Sources */,
 				C11D5384271DAE0A00604F15 /* AppDelegate.swift in Sources */,
 				C1AF70202736163500AAE4AD /* Anything.swift in Sources */,
+				C141CDE5273CC583006FB2A7 /* API.swift in Sources */,
+				C141CDE8273CC5A6006FB2A7 /* MoyaConfig.swift in Sources */,
 				C1A7EB5A2732491000634EF9 /* RecipeView.swift in Sources */,
 				C1AF701D2735FD8400AAE4AD /* SearchBarView.swift in Sources */,
+				C141CDEB273CC5BA006FB2A7 /* NetworkManager2.swift in Sources */,
 				C16A761B2737C88C008ED603 /* PictureView.swift in Sources */,
 				C151CB1F27395FBA00B0AEC6 /* FSPagerViewSUI.swift in Sources */,
 				C12C096727376B85002987E3 /* ESTabBarView.swift in Sources */,
@@ -610,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C141CDE9273CC5A6006FB2A7 /* MoyaConfig.swift in Sources */,
 				C177DF8E273163A60061F97F /* NetworkManager.swift in Sources */,
 				C177DF91273164B90061F97F /* PostViewModel.swift in Sources */,
 				C12C096827376B85002987E3 /* ESTabBarView.swift in Sources */,
@@ -625,6 +649,7 @@
 				C17AA9E72722ACE7003EC7F1 /* AppDelegate.swift in Sources */,
 				C177DF8A273162D20061F97F /* PostModel.swift in Sources */,
 				C16A763F2737C9AC008ED603 /* TimelinePoint.swift in Sources */,
+				C141CDEC273CC5BA006FB2A7 /* NetworkManager2.swift in Sources */,
 				C17AA9E82722ACE7003EC7F1 /* SceneDelegate.swift in Sources */,
 				C1B877202734216500EE9698 /* ImagePickerViewController.swift in Sources */,
 				C1AF701B2735FCC600AAE4AD /* SearchBarCoordinator.swift in Sources */,
@@ -632,6 +657,7 @@
 				C1A7EB6127335DE200634EF9 /* RecipeDetailView.swift in Sources */,
 				C1A9C1872732C1D200D2944B /* Helper.swift in Sources */,
 				C177DF872731621F0061F97F /* PostResponse.swift in Sources */,
+				C141CDE6273CC583006FB2A7 /* API.swift in Sources */,
 				C1A7EB5E273249AF00634EF9 /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

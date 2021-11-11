@@ -1,28 +1,46 @@
 PODS:
+  - Alamofire (5.4.4)
   - ESTabBarController-swift (2.8.0)
   - FSPagerView (0.8.3)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - ObjectMapper (4.2.0)
   - pop (1.0.12)
+  - SwiftyJSON (5.0.1)
   - TimelineTableViewCell (2.2.2)
 
 DEPENDENCIES:
   - ESTabBarController-swift
   - FSPagerView
+  - Moya
+  - ObjectMapper
   - pop
+  - SwiftyJSON
   - TimelineTableViewCell
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - ESTabBarController-swift
     - FSPagerView
+    - Moya
+    - ObjectMapper
     - pop
+    - SwiftyJSON
     - TimelineTableViewCell
 
 SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TimelineTableViewCell: f0c35f7941775e48a5356e7c7ae3a5a51721c80a
 
-PODFILE CHECKSUM: bb81dbb02f0d3361800f9649fa81ae55dab83532
+PODFILE CHECKSUM: 6fe60681bd5d496abb5c4b55b2f79c27e40584d2
 
 COCOAPODS: 1.11.2
