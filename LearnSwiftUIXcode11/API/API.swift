@@ -15,6 +15,7 @@ enum API{
     //上传用户头像
     case uploadHeadImage(parameters: [String:Any],imageDate:Data)
     case easyRequset
+    case foodImage
 }
 
 extension API:TargetType{
@@ -22,6 +23,8 @@ extension API:TargetType{
         switch self {
         case .easyRequset:
             return URL.init(string:"http://news-at.zhihu.com/api/")!
+        case .foodImage:
+            return URL.init(string: "https://source.unsplash.com/")!
         default:
             return URL.init(string:(Moya_baseURL))!
         }
@@ -37,12 +40,14 @@ extension API:TargetType{
             return "versionService.getAppUpdateApi"
         case .uploadHeadImage( _):
             return "/file/user/upload.jhtml"
+        case .foodImage:
+            return "720x450/?food"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .easyRequset:
+        case .easyRequset,.foodImage:
             return .get
         default:
             return .post
@@ -71,6 +76,8 @@ extension API:TargetType{
             let formData = MultipartFormData(provider: .data(imageDate), name: "file",
                                              fileName: "hangge.png", mimeType: "image/png")
             return .uploadCompositeMultipart([formData], urlParameters: parameters)
+        case .foodImage:
+            return .requestPlain
         }
         //可选参数https://github.com/Moya/Moya/blob/master/docs_CN/Examples/OptionalParameters.md
         //        case .users(let limit):

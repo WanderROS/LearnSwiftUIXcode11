@@ -21,6 +21,7 @@ typealias RequestModelsSuccessCallback<T:Mappable> = (([T],ResponseModel?) -> Vo
 
 // 网络请求的回调 包括：网络请求的模型(code,message,data等，具体根据业务来定)
 typealias RequestCallback = ((ResponseModel) -> Void)
+typealias RequestDataCallback = ((Data) -> Void)
 /// 网络错误的回调
 typealias errorCallback = (() -> Void)
 
@@ -157,88 +158,27 @@ fileprivate let Provider = MoyaProvider<MultiTarget>(endpointClosure: myEndpoint
 ///   - successCallback: 成功的回调
 ///   - failureCallback: 失败的回调
 /// - Returns: 取消当前网络请求Cancellable实例
-@discardableResult
-func NetWorkRequest<T: Mappable>(_ target: TargetType, needShowFailAlert: Bool = true, modelType: T.Type, successCallback:@escaping RequestModelSuccessCallback<T>, failureCallback: RequestCallback? = nil) -> Cancellable? {
-//    return NetWorkRequest(target, showFailAlert: showFailAlert, modelType: modelType, successCallback: successCallback, failureCallback: nil)
-    return NetWorkRequest(target, needShowFailAlert: needShowFailAlert, successCallback: { (responseModel) in
-        
-        if let model = T(JSONString: responseModel.dataString) {
-            successCallback(model, responseModel)
-        } else {
-            errorHandler(code: responseModel.code , message: "解析失败", needShowFailAlert: needShowFailAlert, failure: failureCallback)
-        }
-        
-    }, failureCallback: failureCallback)
-}
-
-/// 网络请求，当模型为dict类型
-/// - Parameters:
-///   - target: 接口
-///   - showFailAlert: 是否显示网络请求失败的弹框
-///   - modelType: 模型
-///   - successCallback: 成功的回调
-///   - failureCallback: 失败的回调
-/// - Returns: 取消当前网络请求Cancellable实例
-@discardableResult
-func NetWorkRequest<T: Mappable>(_ target: TargetType, needShowFailAlert: Bool = true, modelType: [T].Type, successCallback:@escaping RequestModelsSuccessCallback<T>, failureCallback: RequestCallback? = nil) -> Cancellable? {
-    return NetWorkRequest(target, needShowFailAlert: needShowFailAlert, successCallback: { (responseModel) in
-        
-        if let model = [T](JSONString: responseModel.dataString) {
-            successCallback(model, responseModel)
-        } else {
-            errorHandler(code: responseModel.code , message: "解析失败", needShowFailAlert: needShowFailAlert, failure: failureCallback)
-        }
-        
-    }, failureCallback: failureCallback)
-}
 
 
-/// 网络请求的基础方法
-/// - Parameters:
-///   - target: 接口
-///   - showFailAlert: 是否显示网络请求失败的弹框
-///   - successCallback: 成功的回调
-///   - failureCallback: 失败的回调
-/// - Returns: 取消当前网络请求Cancellable实例
-fileprivate func NetWorkRequest(_ target: TargetType, needShowFailAlert: Bool = true, successCallback:@escaping RequestCallback, failureCallback: RequestCallback? = nil) -> Cancellable? {
-    
+ func NetWorkRequest(_ target: TargetType, successCallback:@escaping RequestDataCallback, failureCallback: RequestDataCallback? = nil) -> Cancellable? {
     
     // 先判断网络是否有链接 没有的话直接返回--代码略
     if !UIDevice.isNetworkConnect {
         // code = 9999 代表无网络  这里根据具体业务来自定义
-        errorHandler(code: 9999, message: "网络似乎出现了问题", needShowFailAlert: needShowFailAlert, failure: failureCallback)
+        errorDataHandler(code: 9999, message: "网络似乎出现了问题", needShowFailAlert: false, failure: failureCallback)
         return nil
     }
     return Provider.request(MultiTarget(target)) { result in
         switch result {
         case let .success(response):
-            do {
-                let jsonData = try JSON(data: response.data)
-                print("返回结果是：\(jsonData)")
-                if !validateRepsonse(response: jsonData.dictionary, needShowFailAlert: needShowFailAlert, failure: failureCallback) { return }
-                let respModel = ResponseModel()
-                /// 这里的 -999的code码 需要根据具体业务来设置
-                respModel.code = jsonData[responseCodeKey].int ?? -999
-                respModel.message = jsonData[responseMessageKey].stringValue
-
-                if respModel.code == successCode {
-                    respModel.dataString = jsonData[responseDataKey].rawString() ?? ""
-                    successCallback(respModel)
-                } else {
-                    errorHandler(code: respModel.code , message: respModel.message , needShowFailAlert: needShowFailAlert, failure: failureCallback)
-                    return
-                }
-
-            } catch {
-                // code = 1000000 代表JSON解析失败  这里根据具体业务来自定义
-                errorHandler(code: 1000000, message: String(data: response.data, encoding: String.Encoding.utf8)!, needShowFailAlert: needShowFailAlert, failure: failureCallback)
-            }
+                successCallback(response.data)
         case let .failure(error as NSError):
-            errorHandler(code: error.code, message: "网络连接失败", needShowFailAlert: needShowFailAlert, failure: failureCallback)
+            errorDataHandler(code: error.code, message: "网络连接失败", needShowFailAlert: false, failure: failureCallback)
         }
     }
     
 }
+
 
 
 /// 预判断后台返回的数据有效性 如通过Code码来确定数据完整性等  根据具体的业务情况来判断  有需要自己可以打开注释
@@ -292,6 +232,11 @@ private func errorHandler(code: Int, message: String, needShowFailAlert: Bool, f
         print("弹出错误信息弹框\(message)")
     }
     failure?(model)
+}
+
+private func errorDataHandler(code: Int, message: String, needShowFailAlert: Bool, failure: RequestDataCallback?) {
+    print("发生错误：\(code)--\(message)")
+    failure?(Data())
 }
 
 private func judgeCondition(_ flag: String?) {

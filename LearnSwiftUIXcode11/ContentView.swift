@@ -66,6 +66,7 @@ struct ContentView: View {
     ]
     
     @State var cancelableRequest: Cancellable?
+    @State var cancelableRequest2: Cancellable?
     @State var currentPage: Int = 0
     var body: some View {
         VStack{
@@ -109,22 +110,44 @@ struct ContentView: View {
             
             Button("按下"){
                 //self.images.append(TutorialItem(image: "find"))
-                cancelableRequest = NetWorkRequest(API.easyRequset, modelType: [ZhihuItemModel].self, successCallback: { (zhihuModels, responseModel) in
-                            zhihuModels.forEach({ (item) in
-                                print("模型属性--\(item.title ?? "模型无title")" )
-                                print("图片链接--\(item.images?.first ?? "nil")")
-                                let url = URL(string: item.images?.first ?? "nil")
-                                if url != nil{
-                                    let data = try? Data(contentsOf: url!)
-                                    let temp =  TutorialItem(image: data!)
-                                    self.images.append(temp)
-                                }
-                              
-                                
-                        })
-                        }, failureCallback: { (responseModel) in
-                            print("网络请求失败 包括服务器错误和网络异常\(responseModel.code)__\(responseModel.message)")
-                        })
+//                self.cancelableRequest = NetWorkRequest(API.easyRequset, modelType: [ZhihuItemModel].self, successCallback: { (zhihuModels, responseModel) in
+//                            zhihuModels.forEach({ (item) in
+//                                print("模型属性--\(item.title ?? "模型无title")" )
+//                                print("图片链接--\(item.images?.first ?? "nil")")
+//                                let url = URL(string: item.images?.first ?? "nil")
+//                                if url != nil{
+//                                    let data = try? Data(contentsOf: url!)
+//                                    let temp =  TutorialItem(image: data!)
+//                                    self.images.append(temp)
+//                                }
+//
+//
+//                        })
+//                        }, failureCallback: { (responseModel) in
+//                            print("网络请求失败 包括服务器错误和网络异常\(responseModel.code)__\(responseModel.message)")
+//                        })
+            }
+            Button("食物"){
+                DispatchQueue.global().async{
+                    let url = URL(string: "https://source.unsplash.com/720x450/?food")
+                    if let url = url {
+                        let data = try? Data(contentsOf: url)
+                        let temp =  TutorialItem(image: data!)
+                        self.images.append(temp)
+                    }
+                }
+                    self.cancelableRequest =  NetWorkRequest(API.foodImage,successCallback: {
+                        (dataModel) in
+                            print("success!")
+                            let data = dataModel
+                            let temp =  TutorialItem(image: data)
+                        DispatchQueue.main.async {
+                            self.images.append(temp)
+                        }
+                    }, failureCallback: { (response) in
+                        print("网络请求失败 包括服务器错误和网络异常")
+                    })
+                
             }
             Button("去掉"){
                 self.images.remove(at: self.images.count-1)
