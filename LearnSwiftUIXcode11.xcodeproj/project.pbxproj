@@ -146,6 +146,7 @@
 		C1AF701F2736163500AAE4AD /* Anything.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anything.swift; sourceTree = "<group>"; };
 		C1B8771B27341E4400EE9698 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
 		C1B8771E2734216500EE9698 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		C1FFC3AC273EA562003BF528 /* JSONPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = JSONPlayground.playground; path = ../../JSONPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D3C71C1F551F1620B0BA48C1 /* Pods_dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBBD0B6C56FDD16A9ED8FA1 /* Pods-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dev.release.xcconfig"; path = "Target Support Files/Pods-dev/Pods-dev.release.xcconfig"; sourceTree = "<group>"; };
 		ED5C0D0661AB0C31A7B3381F /* Pods_sit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +212,7 @@
 		C11D5377271DAE0A00604F15 = {
 			isa = PBXGroup;
 			children = (
+				C1FFC3AB273EA515003BF528 /* Playground */,
 				C11D5382271DAE0A00604F15 /* LearnSwiftUIXcode11 */,
 				C11D5399271DAE0B00604F15 /* LearnSwiftUIXcode11Tests */,
 				C11D53A4271DAE0B00604F15 /* LearnSwiftUIXcode11UITests */,
@@ -340,6 +342,14 @@
 				C1A9C1852732C1D200D2944B /* Helper.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C1FFC3AB273EA515003BF528 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				C1FFC3AC273EA562003BF528 /* JSONPlayground.playground */,
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
