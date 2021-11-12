@@ -12,6 +12,7 @@ target 'dev' do
   pod 'Moya'
   pod 'ObjectMapper'
   pod 'SwiftyJSON'
+  pod 'HandyJSON'
 #  pod 'EFQRCode', '~> 6.1.0'
 #  pod 'Hue'
 #  pod 'OAuthSwift', '~> 2.2.0'
